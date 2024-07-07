@@ -16,13 +16,15 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class ABDBlockTagsProvider extends BlockTagsProvider {
-
     public ABDBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, ArrowBlockDeployer.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(BlockTags.DIRT).add(ABDBlocks.GLOWING_DIRT.get());
+        this.tag(BlockTags.DIRT)
+                .add(ABDBlocks.GLOWING_DIRT.get());
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ABDBlocks.GLOWING_DIRT.get());
     }
 }

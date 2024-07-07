@@ -29,6 +29,10 @@ public abstract class AbstractBlockShotArrow extends Arrow {
     @Override
     protected void onHitBlock(BlockHitResult pResult) {
         super.onHitBlock(pResult);
+        placeBlock(pResult);
+    }
+
+    protected void placeBlock(BlockHitResult pResult) {
         BlockPos hitPos = pResult.getBlockPos();
         Direction direction = pResult.getDirection();
         BlockPos targetPos = hitPos.relative(direction, 1);

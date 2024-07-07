@@ -17,24 +17,14 @@ import net.minecraft.world.phys.BlockHitResult;
 
 import java.util.Objects;
 
-public class TorchAttachedArrow extends Arrow {
-    protected final Block blockAttached;
-    protected final Item pickUpItem;
-
+public class TorchAttachedArrow extends AbstractBlockShotArrow {
     public TorchAttachedArrow(Level pLevel, LivingEntity pShooter, Item pPickUpItem) {
-        super(pLevel, pShooter);
-        this.blockAttached = Blocks.TORCH;
-        this.pickUpItem = pPickUpItem;
+        super(pLevel, pShooter, Blocks.TORCH, pPickUpItem);
     }
 
     @Override
-    protected ItemStack getPickupItem() {
-        return new ItemStack(this.pickUpItem);
-    }
-
-    @Override
-    protected void onHitBlock(BlockHitResult pResult) {
-        super.onHitBlock(pResult);
+    protected void placeBlock(BlockHitResult pResult) {
+        super.placeBlock(pResult);
         BlockPos hitPos = pResult.getBlockPos();
         Direction direction = pResult.getDirection();
         BlockPos targetPos = hitPos.relative(direction, 1);

@@ -20,7 +20,6 @@ import net.minecraftforge.event.ForgeEventFactory;
 import java.util.function.Predicate;
 
 public class BlockShotBowItem extends BowItem {
-    // TODO:弓で射出できる矢の設定
     public static final Predicate<ItemStack> BLOCKSHOT_ARROW =
             (itemStack) -> itemStack.is(ABDTags.Items.BLOCKSHOT_ARROWS);
 
@@ -28,10 +27,9 @@ public class BlockShotBowItem extends BowItem {
         super(pProperties);
     }
 
-    // TODO:耐久値を減らす処理
-
     @Override
     public void releaseUsing(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving, int pTimeLeft) {
+        // 親クラスの処理をそのまま流用
         if (pEntityLiving instanceof Player player) {
             boolean flag = player.getAbilities().instabuild || EnchantmentHelper.getItemEnchantmentLevel(Enchantments.INFINITY_ARROWS, pStack) > 0;
             ItemStack itemstack = player.getProjectile(pStack);
@@ -43,6 +41,7 @@ public class BlockShotBowItem extends BowItem {
 
             if (!itemstack.isEmpty() || flag) {
                 if (itemstack.isEmpty()) {
+                    // 変更：クリエイティブ＆矢がない場合、グロウベリー付きの矢を発射
                     itemstack = new ItemStack(ABDItems.GLOWBERRY_ATTACHED_ARROW.get());
                 }
 
@@ -100,4 +99,5 @@ public class BlockShotBowItem extends BowItem {
     public Predicate<ItemStack> getAllSupportedProjectiles() {
         return BLOCKSHOT_ARROW;
     }
+
 }

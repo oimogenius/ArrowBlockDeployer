@@ -14,7 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 public class BlockShotArrowItem extends ArrowItem {
-    private Type type;
+    private final Type type;
 
     public BlockShotArrowItem(Properties pProperties, Type pType) {
         super(pProperties);
