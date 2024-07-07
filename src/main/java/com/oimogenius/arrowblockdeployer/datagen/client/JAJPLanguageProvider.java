@@ -1,6 +1,7 @@
-package com.oimogenius.arrowblockdeployer.datagen;
+package com.oimogenius.arrowblockdeployer.datagen.client;
 
 import com.oimogenius.arrowblockdeployer.ArrowBlockDeployer;
+import com.oimogenius.arrowblockdeployer.block.ModBlocks;
 import com.oimogenius.arrowblockdeployer.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -14,8 +15,10 @@ public class JAJPLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        addItem(ModItems.BLOCKSHOT_ARROW, "ブロック射撃矢");
-        addItem(ModItems.BLOCKSHOT_BOW, "ブロック射撃弓");
         add("creative_tab:abd_tab", "Arrow Block Deployer");
+        addItem(ModItems.GLOWBERRY_ATTACHED_ARROW, "ブロック射撃矢");
+        addItem(ModItems.BLOCKSHOT_BOW, "ブロック射撃弓");
+
+        addBlock(ModBlocks.GLOWING_DIRT, "発光する土");
     }
 }

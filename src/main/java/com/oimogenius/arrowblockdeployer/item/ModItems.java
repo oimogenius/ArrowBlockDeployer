@@ -15,7 +15,9 @@ public class ModItems {
             ArrowBlockDeployer.MOD_ID);
 
     // レジストリにアイテムを追加
-    public static final RegistryObject<Item> BLOCKSHOT_ARROW = ITEMS.register("blockshot_arrow",
+    // TODO: ブロックを添付した矢の追加
+    public static final RegistryObject<Item> GLOWBERRY_ATTACHED_ARROW = ITEMS.register(
+            "glowberry_attached_arrow",
             () -> new BlockShotArrowItem(new Item.Properties()));
     public static final RegistryObject<Item> BLOCKSHOT_BOW = ITEMS.register("blockshot_bow",
             () -> new BlockShotBowItem(new Item.Properties()));

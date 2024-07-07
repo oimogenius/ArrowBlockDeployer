@@ -1,7 +1,7 @@
 package com.oimogenius.arrowblockdeployer.event;
 
 import com.oimogenius.arrowblockdeployer.ArrowBlockDeployer;
-import com.oimogenius.arrowblockdeployer.item.entity.BlockShotArrow;
+import com.oimogenius.arrowblockdeployer.item.entity.AbstractBlockShotArrow;
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.event.level.ExplosionEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -13,11 +13,12 @@ import java.util.List;
 public class ModEvent {
     @SubscribeEvent
     public static void explosionEventHandler(ExplosionEvent.Detonate event) {
-        List<Entity> affectedEntities = event.getAffectedEntities();
-        for (Entity entity : affectedEntities) {
-            if (entity instanceof BlockShotArrow) {
-                entity.discard();
-            }
-        }
+        // TODO: 後で消す
+//        List<Entity> affectedEntities = event.getAffectedEntities();
+//        for (Entity entity : affectedEntities) {
+//            if (entity instanceof AbstractBlockShotArrow) {
+//                entity.discard();
+//            }
+//        }
     }
 }

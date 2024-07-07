@@ -1,6 +1,7 @@
 package com.oimogenius.arrowblockdeployer;
 
 import com.mojang.logging.LogUtils;
+import com.oimogenius.arrowblockdeployer.block.ModBlocks;
 import com.oimogenius.arrowblockdeployer.item.ModItems;
 import com.oimogenius.arrowblockdeployer.item.ModTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -17,7 +18,7 @@ import org.slf4j.Logger;
 
 @Mod(ArrowBlockDeployer.MOD_ID)
 public class ArrowBlockDeployer {
-    public static final String MOD_ID = "arrow_block_deployer";
+    public static final String MOD_ID = "arrowblockdeployer";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public ArrowBlockDeployer() {
@@ -28,7 +29,7 @@ public class ArrowBlockDeployer {
         // レジストリ
         ModItems.register(modEventBus);
         ModTabs.register(modEventBus);
-
+        ModBlocks.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 

@@ -1,6 +1,7 @@
 package com.oimogenius.arrowblockdeployer.item.custom;
 
-import com.oimogenius.arrowblockdeployer.item.entity.BlockShotArrow;
+import com.oimogenius.arrowblockdeployer.item.entity.AbstractBlockShotArrow;
+import com.oimogenius.arrowblockdeployer.item.entity.GlowBerryAttachedArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Arrow;
@@ -15,7 +16,7 @@ public class BlockShotArrowItem extends ArrowItem {
 
     @Override
     public AbstractArrow createArrow(Level pLevel, ItemStack pStack, LivingEntity pShooter) {
-        Arrow arrow = new BlockShotArrow(pLevel, pShooter);
+        Arrow arrow = new GlowBerryAttachedArrow(pLevel, pShooter);
         arrow.setEffectsFromItem(pStack);
         return arrow;
     }

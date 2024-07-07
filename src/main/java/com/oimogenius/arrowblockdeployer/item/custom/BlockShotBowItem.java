@@ -4,7 +4,6 @@ import com.oimogenius.arrowblockdeployer.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -21,7 +20,7 @@ import java.util.function.Predicate;
 
 public class BlockShotBowItem extends BowItem {
     public static final Predicate<ItemStack> BLOCKSHOT_ARROW =
-            (itemStack) -> itemStack.is(ModItems.BLOCKSHOT_ARROW.get());
+            (itemStack) -> itemStack.is(ModItems.GLOWBERRY_ATTACHED_ARROW.get());
 
     public BlockShotBowItem(Properties pProperties) {
         super(pProperties);
@@ -42,14 +41,14 @@ public class BlockShotBowItem extends BowItem {
 
             if (!itemstack.isEmpty() || flag) {
                 if (itemstack.isEmpty()) {
-                    itemstack = new ItemStack(ModItems.BLOCKSHOT_ARROW.get());
+                    itemstack = new ItemStack(ModItems.GLOWBERRY_ATTACHED_ARROW.get());
                 }
 
                 float f = getPowerForTime(i);
                 if (!((double)f < 0.1)) {
                     boolean flag1 = player.getAbilities().instabuild || itemstack.getItem() instanceof ArrowItem && ((ArrowItem)itemstack.getItem()).isInfinite(itemstack, pStack, player);
                     if (!pLevel.isClientSide) {
-                        ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : ModItems.BLOCKSHOT_ARROW.get());
+                        ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : ModItems.GLOWBERRY_ATTACHED_ARROW.get());
                         AbstractArrow abstractarrow = arrowitem.createArrow(pLevel, itemstack, player);
                         abstractarrow = this.customArrow(abstractarrow);
                         abstractarrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, f * 3.0F, 1.0F);

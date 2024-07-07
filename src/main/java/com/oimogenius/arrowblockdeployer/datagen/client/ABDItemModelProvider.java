@@ -1,4 +1,4 @@
-package com.oimogenius.arrowblockdeployer.datagen;
+package com.oimogenius.arrowblockdeployer.datagen.client;
 
 import com.oimogenius.arrowblockdeployer.ArrowBlockDeployer;
 import com.oimogenius.arrowblockdeployer.item.ModItems;
@@ -14,7 +14,7 @@ public class ABDItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        withExistingParent(ModItems.BLOCKSHOT_ARROW.getId().getPath(),
+        withExistingParent(ModItems.GLOWBERRY_ATTACHED_ARROW.getId().getPath(),
                 new ResourceLocation("item/arrow"));
         withExistingParent(ModItems.BLOCKSHOT_BOW.getId().getPath(),
                 new ResourceLocation("item/bow"));
