@@ -5,8 +5,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 
-public class GlowBerryAttachedArrow extends AbstractBlockShotArrow {
-    public GlowBerryAttachedArrow(Level pLevel, LivingEntity pShooter, Item item) {
-        super(pLevel, pShooter, Blocks.CAVE_VINES, item);
+public class TNTAttachedArrow extends AbstractBlockShotArrow {
+    public TNTAttachedArrow(Level pLevel, LivingEntity pShooter, Item item) {
+        super(pLevel, pShooter, Blocks.TNT, item);
     }
 }

@@ -2,5 +2,8 @@
   "block.arrowblockdeployer.glowing_dirt": "Glowing Dirt",
   "creative_tab:abd_tab": "Arrow Block Deployer",
   "item.arrowblockdeployer.blockshot_bow": "Blockshot Bow",
-  "item.arrowblockdeployer.glowberry_attached_arrow": "Blockshot Arrow"
+  "item.arrowblockdeployer.glowberry_attached_arrow": "Glowberry Attached Arrow",
+  "item.arrowblockdeployer.glowing_dirt_attached_arrow": "Glowing Dirt Attached Arrow",
+  "item.arrowblockdeployer.tnt_attached_arrow": "TNT Attached Arrow",
+  "item.arrowblockdeployer.torch_attached_arrow": "Torch Attached Arrow"
 }

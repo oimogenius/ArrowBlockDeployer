@@ -6,6 +6,8 @@ import com.oimogenius.arrowblockdeployer.datagen.client.ABDBlockStateProvider;
 import com.oimogenius.arrowblockdeployer.datagen.client.ABDItemModelProvider;
 import com.oimogenius.arrowblockdeployer.datagen.client.ENUSLanguageProvider;
 import com.oimogenius.arrowblockdeployer.datagen.client.JAJPLanguageProvider;
+import com.oimogenius.arrowblockdeployer.datagen.server.ABDBlockTagsProvider;
+import com.oimogenius.arrowblockdeployer.datagen.server.ABDItemTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -34,6 +36,12 @@ public class DataGenerators {
         // 言語
         generator.addProvider(event.includeClient(), new ENUSLanguageProvider(packOutput));
         generator.addProvider(event.includeClient(), new JAJPLanguageProvider(packOutput));
+        // タグ
+        ABDBlockTagsProvider blockTags = generator.addProvider(event.includeServer(), new ABDBlockTagsProvider(packOutput,
+                lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new ABDItemTagsProvider(packOutput,
+                lookupProvider, blockTags.contentsGetter(), existingFileHelper));
+        // TODO:ルート、レシピ
 
     }
 }

@@ -1,7 +1,7 @@
 package com.oimogenius.arrowblockdeployer.block;
 
 import com.oimogenius.arrowblockdeployer.ArrowBlockDeployer;
-import com.oimogenius.arrowblockdeployer.item.ModItems;
+import com.oimogenius.arrowblockdeployer.item.ABDItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -14,7 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-public class ModBlocks {
+public class ABDBlocks {
     // レジストリを作成
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ArrowBlockDeployer.MOD_ID);
@@ -29,7 +29,7 @@ public class ModBlocks {
         // レジストリにブロックを追加
         RegistryObject<T> block = BLOCKS.register(name, supplier);
         // ブロックアイテムをアイテムレジストリに追加
-        ModItems.ITEMS.register(name,
+        ABDItems.ITEMS.register(name,
                 () -> new BlockItem(block.get(), new Item.Properties()));
         return block;
     }

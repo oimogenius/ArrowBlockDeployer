@@ -1,7 +1,7 @@
 package com.oimogenius.arrowblockdeployer.datagen.client;
 
 import com.oimogenius.arrowblockdeployer.ArrowBlockDeployer;
-import com.oimogenius.arrowblockdeployer.item.ModItems;
+import com.oimogenius.arrowblockdeployer.item.ABDItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -14,9 +14,16 @@ public class ABDItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        withExistingParent(ModItems.GLOWBERRY_ATTACHED_ARROW.getId().getPath(),
-                new ResourceLocation("item/arrow"));
-        withExistingParent(ModItems.BLOCKSHOT_BOW.getId().getPath(),
+        // TODO:ちゃんとしたモデルとテクスチャ
+        withExistingParent(ABDItems.BLOCKSHOT_BOW.getId().getPath(),
                 new ResourceLocation("item/bow"));
+        withExistingParent(ABDItems.GLOWBERRY_ATTACHED_ARROW.getId().getPath(),
+                new ResourceLocation("item/arrow"));
+        withExistingParent(ABDItems.GLOWING_DIRT_ATTACHED_ARROW.getId().getPath(),
+                new ResourceLocation("item/arrow"));
+        withExistingParent(ABDItems.TNT_ATTACHED_ARROW.getId().getPath(),
+                new ResourceLocation("item/arrow"));
+        withExistingParent(ABDItems.TORCH_ATTACHED_ARROW.getId().getPath(),
+                new ResourceLocation("item/arrow"));
     }
 }

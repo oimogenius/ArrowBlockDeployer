@@ -1,8 +1,8 @@
 package com.oimogenius.arrowblockdeployer.datagen.client;
 
 import com.oimogenius.arrowblockdeployer.ArrowBlockDeployer;
-import com.oimogenius.arrowblockdeployer.block.ModBlocks;
-import com.oimogenius.arrowblockdeployer.item.ModItems;
+import com.oimogenius.arrowblockdeployer.block.ABDBlocks;
+import com.oimogenius.arrowblockdeployer.item.ABDItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -16,9 +16,12 @@ public class ENUSLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("creative_tab:abd_tab", "Arrow Block Deployer");
-        addItem(ModItems.GLOWBERRY_ATTACHED_ARROW, "Blockshot Arrow");
-        addItem(ModItems.BLOCKSHOT_BOW, "Blockshot Bow");
+        addItem(ABDItems.BLOCKSHOT_BOW, "Blockshot Bow");
+        addItem(ABDItems.GLOWBERRY_ATTACHED_ARROW, "Glowberry Attached Arrow");
+        addItem(ABDItems.GLOWING_DIRT_ATTACHED_ARROW, "Glowing Dirt Attached Arrow");
+        addItem(ABDItems.TNT_ATTACHED_ARROW, "TNT Attached Arrow");
+        addItem(ABDItems.TORCH_ATTACHED_ARROW, "Torch Attached Arrow");
 
-        addBlock(ModBlocks.GLOWING_DIRT, "Glowing Dirt");
+        addBlock(ABDBlocks.GLOWING_DIRT, "Glowing Dirt");
     }
 }

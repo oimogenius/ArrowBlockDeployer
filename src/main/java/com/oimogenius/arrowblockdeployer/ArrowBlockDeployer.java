@@ -1,9 +1,9 @@
 package com.oimogenius.arrowblockdeployer;
 
 import com.mojang.logging.LogUtils;
-import com.oimogenius.arrowblockdeployer.block.ModBlocks;
-import com.oimogenius.arrowblockdeployer.item.ModItems;
-import com.oimogenius.arrowblockdeployer.item.ModTabs;
+import com.oimogenius.arrowblockdeployer.block.ABDBlocks;
+import com.oimogenius.arrowblockdeployer.item.ABDItems;
+import com.oimogenius.arrowblockdeployer.item.ABDTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -27,9 +27,9 @@ public class ArrowBlockDeployer {
         modEventBus.addListener(this::commonSetup);
 
         // レジストリ
-        ModItems.register(modEventBus);
-        ModTabs.register(modEventBus);
-        ModBlocks.register(modEventBus);
+        ABDItems.register(modEventBus);
+        ABDTabs.register(modEventBus);
+        ABDBlocks.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 

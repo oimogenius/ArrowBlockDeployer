@@ -1,7 +1,7 @@
 package com.oimogenius.arrowblockdeployer.datagen.client;
 
 import com.oimogenius.arrowblockdeployer.ArrowBlockDeployer;
-import com.oimogenius.arrowblockdeployer.block.ModBlocks;
+import com.oimogenius.arrowblockdeployer.block.ABDBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -15,7 +15,7 @@ public class ABDBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithExistingParent(ModBlocks.GLOWING_DIRT, "block/dirt");
+        blockWithExistingParent(ABDBlocks.GLOWING_DIRT, "block/dirt");
     }
 
     private void blockWithExistingParent(RegistryObject<Block> block, String parent) {
