@@ -19,11 +19,11 @@ import net.minecraftforge.event.ForgeEventFactory;
 
 import java.util.function.Predicate;
 
-public class BlockShotBowItem extends BowItem {
+public class BlockLauncherBowItem extends BowItem {
     public static final Predicate<ItemStack> BLOCKSHOT_ARROW =
             (itemStack) -> itemStack.is(ABDTags.Items.BLOCKSHOT_ARROWS);
 
-    public BlockShotBowItem(Properties pProperties) {
+    public BlockLauncherBowItem(Properties pProperties) {
         super(pProperties);
     }
 
@@ -42,14 +42,14 @@ public class BlockShotBowItem extends BowItem {
             if (!itemstack.isEmpty() || flag) {
                 if (itemstack.isEmpty()) {
                     // 変更：クリエイティブ＆矢がない場合、グロウベリー付きの矢を発射
-                    itemstack = new ItemStack(ABDItems.GLOWBERRY_ATTACHED_ARROW.get());
+                    itemstack = new ItemStack(ABDItems.GLOW_BERRY_ATTACHED_ARROW.get());
                 }
 
                 float f = getPowerForTime(i);
                 if (!((double)f < 0.1)) {
                     boolean flag1 = player.getAbilities().instabuild || itemstack.getItem() instanceof ArrowItem && ((ArrowItem)itemstack.getItem()).isInfinite(itemstack, pStack, player);
                     if (!pLevel.isClientSide) {
-                        ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : ABDItems.GLOWBERRY_ATTACHED_ARROW.get());
+                        ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : ABDItems.GLOW_BERRY_ATTACHED_ARROW.get());
                         AbstractArrow abstractarrow = arrowitem.createArrow(pLevel, itemstack, player);
                         abstractarrow = this.customArrow(abstractarrow);
                         abstractarrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, f * 3.0F, 1.0F);

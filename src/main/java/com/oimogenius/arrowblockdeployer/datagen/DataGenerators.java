@@ -8,6 +8,7 @@ import com.oimogenius.arrowblockdeployer.datagen.client.ENUSLanguageProvider;
 import com.oimogenius.arrowblockdeployer.datagen.client.JAJPLanguageProvider;
 import com.oimogenius.arrowblockdeployer.datagen.server.ABDBlockTagsProvider;
 import com.oimogenius.arrowblockdeployer.datagen.server.ABDItemTagsProvider;
+import com.oimogenius.arrowblockdeployer.datagen.server.ABDRecipeProvider;
 import com.oimogenius.arrowblockdeployer.datagen.server.loot.ABDLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -42,8 +43,8 @@ public class DataGenerators {
                 lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ABDItemTagsProvider(packOutput,
                 lookupProvider, blockTags.contentsGetter(), existingFileHelper));
-        // TODO: レシピ
         generator.addProvider(event.includeServer(), ABDLootTableProvider.create(packOutput));
+        generator.addProvider(event.includeServer(), new ABDRecipeProvider(packOutput));
 
     }
 }

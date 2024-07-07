@@ -1,6 +1,6 @@
-// 1.20.2	2024-07-07T08:02:20.5484601	Item Models: arrowblockdeployer
-adfa4cd7cd36a18db92b0095c08ceba6fc8e3797 assets/arrowblockdeployer/models/item/blockshot_bow.json
-a91dc6f457e68420fc9c65e99b0db7521b607e62 assets/arrowblockdeployer/models/item/glowberry_attached_arrow.json
+// 1.20.2	2024-07-07T15:41:54.9766563	Item Models: arrowblockdeployer
+adfa4cd7cd36a18db92b0095c08ceba6fc8e3797 assets/arrowblockdeployer/models/item/block_launcher_bow.json
 a91dc6f457e68420fc9c65e99b0db7521b607e62 assets/arrowblockdeployer/models/item/glowing_dirt_attached_arrow.json
+a91dc6f457e68420fc9c65e99b0db7521b607e62 assets/arrowblockdeployer/models/item/glow_berry_attached_arrow.json
 a91dc6f457e68420fc9c65e99b0db7521b607e62 assets/arrowblockdeployer/models/item/tnt_attached_arrow.json
 a91dc6f457e68420fc9c65e99b0db7521b607e62 assets/arrowblockdeployer/models/item/torch_attached_arrow.json

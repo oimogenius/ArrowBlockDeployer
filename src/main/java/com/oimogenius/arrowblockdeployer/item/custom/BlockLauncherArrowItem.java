@@ -13,10 +13,10 @@ import net.minecraft.world.item.ArrowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class BlockShotArrowItem extends ArrowItem {
+public class BlockLauncherArrowItem extends ArrowItem {
     private final Type type;
 
-    public BlockShotArrowItem(Properties pProperties, Type pType) {
+    public BlockLauncherArrowItem(Properties pProperties, Type pType) {
         super(pProperties);
         this.type = pType;
     }
@@ -24,8 +24,8 @@ public class BlockShotArrowItem extends ArrowItem {
     @Override
     public AbstractArrow createArrow(Level pLevel, ItemStack pStack, LivingEntity pShooter) {
         Arrow arrow = switch (this.type) {
-            case GLOWBERRY -> new GlowBerryAttachedArrow(pLevel, pShooter,
-                    ABDItems.GLOWBERRY_ATTACHED_ARROW.get());
+            case GLOW_BERRY -> new GlowBerryAttachedArrow(pLevel, pShooter,
+                    ABDItems.GLOW_BERRY_ATTACHED_ARROW.get());
             case GLOWING_DIRT -> new GlowingDirtAttachedArrow(pLevel, pShooter,
                     ABDItems.GLOWING_DIRT_ATTACHED_ARROW.get());
             case TNT -> new TNTAttachedArrow(pLevel, pShooter,
@@ -46,7 +46,7 @@ public class BlockShotArrowItem extends ArrowItem {
     }
 
     public enum Type {
-        GLOWBERRY,
+        GLOW_BERRY,
         TNT,
         GLOWING_DIRT,
         TORCH
