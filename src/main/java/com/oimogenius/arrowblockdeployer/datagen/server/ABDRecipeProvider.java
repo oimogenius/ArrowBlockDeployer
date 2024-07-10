@@ -26,7 +26,7 @@ public class ABDRecipeProvider extends RecipeProvider {
                 .pattern("B")
                 .define('#', Items.DISPENSER)
                 .define('B', Items.BOW)
-                .unlockedBy(getHasName(Items.GLOW_LICHEN), has(Items.GLOW_LICHEN))
+                .unlockedBy(getHasName(Items.BOW), has(Items.BOW))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, ABDItems.GLOW_BERRY_ATTACHED_ARROW.get())
                 .requires(Items.ARROW)
