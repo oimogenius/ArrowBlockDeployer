@@ -9,15 +9,8 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 
 public class ABDTags {
-    public class Blocks {
-        private static TagKey<Block> tag(String name) {
-            return BlockTags.create(new ResourceLocation(
-                    ArrowBlockDeployer.MOD_ID, name));
-        }
-    }
-
-    public class Items {
-        public static final TagKey<Item> BLOCKSHOT_ARROWS = tag("blockshot_arrows");
+    public static class Items {
+        public static final TagKey<Item> BLOCK_LAUNCHER_ARROWS = tag("blockshot_arrows");
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(
                     ArrowBlockDeployer.MOD_ID, name));

@@ -16,7 +16,7 @@ public class ENUSLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("creative_tab:abd_tab", "Arrow Block Deployer");
-        addItem(ABDItems.BLOCK_LAUNCHER_BOW, "Blockshot Bow");
+        addItem(ABDItems.BLOCK_LAUNCHER_BOW, "Block Launcher Bow");
         addItem(ABDItems.GLOW_BERRY_ATTACHED_ARROW, "Glow Berry Attached Arrow");
         addItem(ABDItems.GLOWING_DIRT_ATTACHED_ARROW, "Glowing Dirt Attached Arrow");
         addItem(ABDItems.TNT_ATTACHED_ARROW, "TNT Attached Arrow");

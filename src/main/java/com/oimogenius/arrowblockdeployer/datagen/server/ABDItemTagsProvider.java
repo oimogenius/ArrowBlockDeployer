@@ -21,7 +21,7 @@ public class ABDItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(ABDTags.Items.BLOCKSHOT_ARROWS)
+        this.tag(ABDTags.Items.BLOCK_LAUNCHER_ARROWS)
                 .add(ABDItems.GLOW_BERRY_ATTACHED_ARROW.get())
                 .add(ABDItems.GLOWING_DIRT_ATTACHED_ARROW.get())
                 .add(ABDItems.TNT_ATTACHED_ARROW.get())

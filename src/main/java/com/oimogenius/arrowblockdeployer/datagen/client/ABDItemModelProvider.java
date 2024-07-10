@@ -14,16 +14,10 @@ public class ABDItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        // TODO:ちゃんとしたモデルとテクスチャ
-        withExistingParent(ABDItems.BLOCK_LAUNCHER_BOW.getId().getPath(),
-                new ResourceLocation("item/bow"));
-        withExistingParent(ABDItems.GLOW_BERRY_ATTACHED_ARROW.getId().getPath(),
-                new ResourceLocation("item/arrow"));
-        withExistingParent(ABDItems.GLOWING_DIRT_ATTACHED_ARROW.getId().getPath(),
-                new ResourceLocation("item/arrow"));
-        withExistingParent(ABDItems.TNT_ATTACHED_ARROW.getId().getPath(),
-                new ResourceLocation("item/arrow"));
-        withExistingParent(ABDItems.TORCH_ATTACHED_ARROW.getId().getPath(),
-                new ResourceLocation("item/arrow"));
+        basicItem(ABDItems.BLOCK_LAUNCHER_BOW.get());
+        basicItem(ABDItems.GLOW_BERRY_ATTACHED_ARROW.get());
+        basicItem(ABDItems.GLOWING_DIRT_ATTACHED_ARROW.get());
+        basicItem(ABDItems.TNT_ATTACHED_ARROW.get());
+        basicItem(ABDItems.TORCH_ATTACHED_ARROW.get());
     }
 }

@@ -43,8 +43,9 @@ public class DataGenerators {
                 lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ABDItemTagsProvider(packOutput,
                 lookupProvider, blockTags.contentsGetter(), existingFileHelper));
+        // ルートテーブル
         generator.addProvider(event.includeServer(), ABDLootTableProvider.create(packOutput));
+        // レシピ
         generator.addProvider(event.includeServer(), new ABDRecipeProvider(packOutput));
-
     }
 }

@@ -7,6 +7,7 @@ import com.oimogenius.arrowblockdeployer.item.entity.TNTAttachedArrow;
 import com.oimogenius.arrowblockdeployer.item.entity.TorchAttachedArrow;
 import jdk.jshell.spi.ExecutionControl;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.item.ArrowItem;
@@ -35,7 +36,7 @@ public class BlockLauncherArrowItem extends ArrowItem {
             default -> {
                 try {
                     throw new ExecutionControl.NotImplementedException("There is no applicable" +
-                            " BlockShotArrow");
+                            " BlockLauncherArrow");
                 } catch (ExecutionControl.NotImplementedException e) {
                     throw new RuntimeException(e);
                 }
@@ -43,6 +44,11 @@ public class BlockLauncherArrowItem extends ArrowItem {
         };
         arrow.setEffectsFromItem(pStack);
         return arrow;
+    }
+
+    @Override
+    public boolean isInfinite(ItemStack stack, ItemStack bow, Player player) {
+        return false;
     }
 
     public enum Type {
