@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_glow_lichen": {
+    "has_bow": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:glow_lichen"
+              "minecraft:bow"
             ]
           }
         ]
@@ -23,7 +23,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_glow_lichen"
+      "has_bow"
     ]
   ],
   "rewards": {

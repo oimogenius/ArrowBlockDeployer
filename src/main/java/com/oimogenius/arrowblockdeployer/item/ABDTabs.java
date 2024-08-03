@@ -19,7 +19,7 @@ public class ABDTabs {
             TABS.register("abd_tab",
                     () -> CreativeModeTab.builder()
                             .title(Component.translatable("creative_tab:abd_tab"))
-                            .icon(ABDItems.GLOW_BERRY_ATTACHED_ARROW.get()::getDefaultInstance)
+                            .icon(ABDItems.BLOCK_LAUNCHER_BOW.get()::getDefaultInstance)
                             .displayItems((itemDisplayParameters, output) -> {
                                 output.accept(ABDItems.BLOCK_LAUNCHER_BOW.get());
                                 output.accept(ABDItems.GLOWING_DIRT_ATTACHED_ARROW.get());

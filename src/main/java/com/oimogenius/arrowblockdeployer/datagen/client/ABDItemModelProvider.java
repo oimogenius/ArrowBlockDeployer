@@ -19,5 +19,7 @@ public class ABDItemModelProvider extends ItemModelProvider {
         basicItem(ABDItems.GLOWING_DIRT_ATTACHED_ARROW.get());
         basicItem(ABDItems.TNT_ATTACHED_ARROW.get());
         basicItem(ABDItems.TORCH_ATTACHED_ARROW.get());
+        withExistingParent("glowing_dirt",
+                new ResourceLocation(ArrowBlockDeployer.MOD_ID, "block/glowing_dirt_inventory"));
     }
 }

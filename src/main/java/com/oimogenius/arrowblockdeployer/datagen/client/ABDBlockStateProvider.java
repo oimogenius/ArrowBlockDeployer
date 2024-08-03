@@ -19,6 +19,6 @@ public class ABDBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockWithExistingParent(RegistryObject<Block> block, String parent) {
-        simpleBlockWithItem(block.get(), models().getExistingFile(mcLoc(parent)));
+        simpleBlock(block.get(), models().getExistingFile(mcLoc(parent)));
     }
 }
