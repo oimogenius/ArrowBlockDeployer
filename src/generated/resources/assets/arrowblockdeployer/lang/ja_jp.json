@@ -1,0 +1,9 @@
+{
+  "block.arrowblockdeployer.glowing_dirt": "発光する土",
+  "creative_tab:abd_tab": "Arrow Block Deployer",
+  "item.arrowblockdeployer.block_launcher_bow": "ブロック射出弓",
+  "item.arrowblockdeployer.glow_berry_attached_arrow": "グロウベリー付きの矢",
+  "item.arrowblockdeployer.glowing_dirt_attached_arrow": "発光する土付きの矢",
+  "item.arrowblockdeployer.tnt_attached_arrow": "TNT付きの矢",
+  "item.arrowblockdeployer.torch_attached_arrow": "松明付きの矢"
+}

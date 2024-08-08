@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "arrowblockdeployer:item/tnt_attached_arrow"
+  }
+}
